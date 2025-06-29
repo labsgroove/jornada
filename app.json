@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Jornada",
+    "slug": "Jornada",
+    "version": "1.0",
+    "orientation": "portrait",
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "android": {
+      "package": "com.pjornada.meuwebviewapp",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "icon": "assets/images/icon.png",
+    "splash": {
+      "image": "assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos da câmera pra acessar o site.",
+        "NSMicrophoneUsageDescription": "Precisamos do microfone pra chamadas ou gravações."
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0f110ef9-7e94-4105-8c54-bf335b08fa4d"
+      }
+    },
+    "owner": "labsgroove"
+  }
+}
