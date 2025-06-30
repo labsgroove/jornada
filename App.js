@@ -3,11 +3,13 @@ import { Alert, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Camera } from 'expo-camera';
 import { requestPermissionsAsync as requestAudioPermissionsAsync } from 'expo-av';
-import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
+import { useKeepAwake } from 'expo-keep-awake';
 
 export default function WebApp() {
   const webViewRef = useRef(null);
   const [awake, setAwake] = useState(false);
+
+  useKeepAwake();
 
   useEffect(() => {
     (async () => {
@@ -18,10 +20,6 @@ export default function WebApp() {
         Alert.alert('Permissões necessárias', 'Este app precisa de acesso à câmera e microfone.');
       }
     })();
-
-    return () => {
-      deactivateKeepAwake(); // Garante que a tela pode apagar se sair do app
-    };
   }, []);
 
   const handleMessage = async (event) => {
