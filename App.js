@@ -1,4 +1,4 @@
-import { Audio } from 'expo-av';
+import { requestPermissionsAsync as requestAudioPermissionsAsync } from 'expo-audio';
 import { Camera } from 'expo-camera';
 import { useEffect } from 'react';
 import { Alert, SafeAreaView } from 'react-native';
@@ -8,7 +8,7 @@ export default function WebApp() {
   useEffect(() => {
     (async () => {
       const { status: camStatus } = await Camera.requestCameraPermissionsAsync();
-      const { status: micStatus } = await Audio.requestPermissionsAsync();
+      const { status: micStatus } = await requestAudioPermissionsAsync();
 
       if (camStatus !== 'granted' || micStatus !== 'granted') {
         Alert.alert('Permissões necessárias', 'Este app precisa de acesso à câmera e microfone.');

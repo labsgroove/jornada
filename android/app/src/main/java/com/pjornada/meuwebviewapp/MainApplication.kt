@@ -1,4 +1,4 @@
-package com.jornada
+package com.pjornada.meuwebviewapp
 
 import android.app.Application
 import android.content.res.Configuration
