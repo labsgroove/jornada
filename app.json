@@ -4,10 +4,17 @@
     "slug": "Jornada",
     "version": "1.0.0",
     "orientation": "portrait",
-    "platforms": ["android", "ios"],
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "android": {
       "package": "com.pjornada.meuwebviewapp",
-      "permissions": ["CAMERA", "RECORD_AUDIO", "WAKE_LOCK"]
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "WAKE_LOCK"
+      ]
     },
     "ios": {
       "infoPlist": {
@@ -26,6 +33,9 @@
         "projectId": "0f110ef9-7e94-4105-8c54-bf335b08fa4d"
       }
     },
-    "owner": "labsgroove"
+    "owner": "labsgroove",
+    "plugins": [
+      "expo-audio"
+    ]
   }
 }
