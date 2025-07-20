@@ -63,7 +63,7 @@ export default function WebApp() {
     <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
       <WebView
         ref={webViewRef}
-        source={{ uri: 'https://plataformajornada.com.br' }}
+        source={{ uri: 'https://www.plataformajornada.com.br/index.php?r=site/logout' }}
         style={{ flex: 1 }}
         javaScriptEnabled
         domStorageEnabled
