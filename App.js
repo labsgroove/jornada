@@ -1,13 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
-import { Alert, SafeAreaView } from 'react-native';
+import { Alert, SafeAreaView, Dimensions } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Camera } from 'expo-camera';
 import { useKeepAwake } from 'expo-keep-awake';
 
 export default function WebApp() {
   const webViewRef = useRef(null);
+  const [dimensions, setDimensions] = useState(Dimensions.get('window'));
   
   useKeepAwake();
+
+  useEffect(() => {
+    const subscription = Dimensions.addEventListener('change', ({ window }) => {
+      setDimensions(window);
+    });
+
+    return () => subscription?.remove();
+  }, []);
 
   useEffect(() => {
     (async () => {

@@ -3,7 +3,7 @@
     "name": "Jornada",
     "slug": "Jornada",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "platforms": [
       "android",
       "ios"
