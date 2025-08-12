@@ -9,7 +9,7 @@
       "ios"
     ],
     "android": {
-      "package": "com.pjornada.meuwebviewapp",
+      "package": "com.ibacbrasil.jornada",
       "permissions": [
         "CAMERA",
         "RECORD_AUDIO",
@@ -24,7 +24,7 @@
         "NSMicrophoneUsageDescription": "Precisamos do microfone pra chamadas ou gravações.",
         "ITSAppUsesNonExemptEncryption": false
       },
-      "bundleIdentifier": "com.pjornada.meuwebviewapp"
+      "bundleIdentifier": "com.ibacbrasil.jornada"
     },
     "icon": "assets/images/icon.png",
     "splash": {
@@ -34,10 +34,10 @@
     },
     "extra": {
       "eas": {
-        "projectId": "0f110ef9-7e94-4105-8c54-bf335b08fa4d"
+        "projectId": "4232eace-4a11-4ef9-8131-926c3bd3e5b7"
       }
     },
-    "owner": "labsgroove",
+    "owner": "rodrigomarafon",
     "plugins": [
       "expo-audio"
     ]
